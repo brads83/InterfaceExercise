@@ -20,7 +20,7 @@ namespace InterfaceExercise
             kia.Logo = "KIA";
             kia.TrunkSize = "small";
             kia.EngineSize = "four cylinder";
-            kia.Wheels = "aluminum";
+            kia.WheelType = "aluminum";
             kia.InteriorFabric = "cloth";
             kia.Slogan = "We wanna see ya in a Kia";
             kia.Color = "white";
@@ -34,7 +34,7 @@ namespace InterfaceExercise
             dodge.InteriorFabric = "cloth";
             dodge.Logo = "DODGE";
             dodge.Slogan = "Guts. Glory. Ram";
-            dodge.Wheels = "chrome";
+            dodge.WheelType = "chrome";
 
             Suv lexus = new Suv();
             lexus.CargoHoldSize = "small";
@@ -44,7 +44,7 @@ namespace InterfaceExercise
             lexus.Logo = "LEXUS";
             lexus.Slogan = "The relentless pursuit of perfection";
             lexus.thirdRow = true;
-            lexus.Wheels = "polished chrome";
+            lexus.WheelType = "polished chrome";
 
             var vehicleList = new List<IVehicle>();
 
@@ -54,7 +54,7 @@ namespace InterfaceExercise
 
             foreach(var vehicle in vehicleList)
             {
-                Console.WriteLine($"Color: {vehicle.Color} Wheels: {vehicle.Wheels} Interior: {vehicle.InteriorFabric} Engine Size: {vehicle.EngineSize}");
+                Console.WriteLine($"Color: {vehicle.Color} WheelType: {vehicle.WheelType} Interior: {vehicle.InteriorFabric} Engine Size: {vehicle.EngineSize}");
                 Console.WriteLine("--------------------------------------------------------------------------------");
             }
         }

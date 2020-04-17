@@ -17,7 +17,7 @@ namespace InterfaceExercise
             {
             }
         public string CargoHoldSize { get; set; }
-        public string Wheels { get; set; }
+        public string WheelType { get; set; }
         public string Color { get; set; }
         public string InteriorFabric { get; set; }
         public string EngineSize { get; set; }

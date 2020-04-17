@@ -19,7 +19,7 @@ namespace InterfaceExercise
 
         public string TrunkSize {get; set;}
         public bool automaticTransmission;
-        public string Wheels { get; set; }
+        public string WheelType { get; set; }
         public string Color { get; set; }
         public string InteriorFabric { get; set; }
         public string EngineSize { get; set; }
