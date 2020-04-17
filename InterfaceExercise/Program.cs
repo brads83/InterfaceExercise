@@ -55,6 +55,7 @@ namespace InterfaceExercise
             foreach(var vehicle in vehicleList)
             {
                 Console.WriteLine($"Color: {vehicle.Color} Wheels: {vehicle.Wheels} Interior: {vehicle.InteriorFabric} Engine Size: {vehicle.EngineSize}");
+                Console.WriteLine("--------------------------------------------------------------------------------");
             }
         }
     }
