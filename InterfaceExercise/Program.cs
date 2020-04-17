@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace InterfaceExercise
 {
@@ -12,33 +13,49 @@ namespace InterfaceExercise
 
             //Create 3 classes called Car , Truck , & SUV
 
-            //In your IVehicle
-            
-                /* Create 4 members that Car, Truck, & SUV all have in common.
-                 * Example: All vehicles have a number of wheels... for now..
-                 */
-            
-
-            //In ICompany
-            
-                /*Create 2 members that are specific to each every company
-                 * regardless of vehicle type.
-                 *
-                 *
-                 * Example: public string Logo { get; set; }
-                 */
-
-            //In each of your car, truck, and suv classes
-
-                /*Create 2 members that are specific to each class
-                 * Example: truck has a bed size while car has a trunk while suv has a cargo hold size
-                 *
-                 * Then, Set each class to inherit from both IVehicle and ICompany and implement their members.
-                 * 
-                 */
-
             //Now, create objects of your 3 classes and give their members values;
             //Creatively display and organize their values
+
+            Car kia = new Car();
+            kia.Logo = "KIA";
+            kia.TrunkSize = "small";
+            kia.EngineSize = "four cylinder";
+            kia.Wheels = "aluminum";
+            kia.InteriorFabric = "cloth";
+            kia.Slogan = "We wanna see ya in a Kia";
+            kia.Color = "white";
+            kia.automaticTransmission = true;
+
+            Truck dodge = new Truck();
+            dodge.BedSize = "six feet";
+            dodge.Color = "black";
+            dodge.EngineSize = "eight cylinder";
+            dodge.fourWheelDrive = true;
+            dodge.InteriorFabric = "cloth";
+            dodge.Logo = "DODGE";
+            dodge.Slogan = "Guts. Glory. Ram";
+            dodge.Wheels = "chrome";
+
+            Suv lexus = new Suv();
+            lexus.CargoHoldSize = "small";
+            lexus.Color = "gold";
+            lexus.EngineSize = "six cylinder";
+            lexus.InteriorFabric = "leather";
+            lexus.Logo = "LEXUS";
+            lexus.Slogan = "The relentless pursuit of perfection";
+            lexus.thirdRow = true;
+            lexus.Wheels = "polished chrome";
+
+            var vehicleList = new List<IVehicle>();
+
+            vehicleList.Add(kia);
+            vehicleList.Add(dodge);
+            vehicleList.Add(lexus);
+
+            foreach(var vehicle in vehicleList)
+            {
+                Console.WriteLine($"Color: {vehicle.Color} Wheels: {vehicle.Wheels} Interior: {vehicle.InteriorFabric} Engine Size: {vehicle.EngineSize}");
+            }
         }
     }
 }
